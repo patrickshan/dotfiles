@@ -1,2 +1,8 @@
 vim/.netrwhist
 vim/.VimballRecord
+vim/doc/ShowTrailingWhitespace.txt
+vim/doc/tags
+vim/plugin/ShowTrailingWhitespace.vim
+vim/ftplugin/diff_ShowTrailingWhitespace.vim
+vim/ftplugin/dosbatch_ShowTrailingWhitespace.vim
+vim/ftplugin/mail_ShowTrailingWhitespace.vim
