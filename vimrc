@@ -65,3 +65,10 @@ set hlsearch                " Highlight searches by default
 set incsearch               " Incrementally search while typing a /regex
 
 set confirm                 " Y-N-C prompt if closing with unsaved changes
+
+"###############################
+"# code related
+"###############################
+"set the code fold level
+set foldlevelstart=10
+"set nofoldenable           " disable auto fold
