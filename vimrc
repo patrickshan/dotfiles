@@ -1,8 +1,28 @@
 " set no compatible with vi
 set nocompatible
 
-" enable pathogen plugin
-execute pathogen#infect()
+filetype off                  " required by vundle while you can enable
+                              " it after defining vundle
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" other plugins
+" solarized color scheme plugin by default vundle will use github repo
+Plugin 'altercation/vim-colors-solarized'
+" syntastic syntax checking plugin
+Plugin 'scrooloose/syntastic'
+" python-mode plugin
+Plugin 'klen/python-mode'
+" YouCompleteMe plugin which can automatically do code-completion
+Plugin 'Valloric/YouCompleteMe'
+
+call vundle#end()
 
 syntax on                     " syntax highlighing
 filetype on                   " try to detect filetypes
