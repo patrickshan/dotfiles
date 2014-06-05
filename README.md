@@ -12,10 +12,10 @@ Install
 git clone git@github.com:patrickshan/vim-config.git
 ```
 
-* fetch all the submodules
+* install essential links
 
 ```
-git submodule update --init --recursive
+./install.sh
 ```
 
 * install ShowTrailingWhitespace:
@@ -25,6 +25,18 @@ vim ShowTrailingWhitespace-1.01.vmb
 :so %
 ```
 
+* install all the plugins managed by vundle
+
+```
+vim +PluginInstall +qall
+```
+
+* install YouCompleteMe library
+
+```
+cd ~/.vim/bundle/YouCompleteMe
+./install.sh --clang-completer
+```
 
 Reference
 =========
@@ -33,3 +45,6 @@ Reference
 
 * showtrailingwhitespace is using [ShowTrailingWhitespace by Ingo Karkat](http://vim.sourceforge.net/scripts/script.php?script_id=3966).
 
+* vundle a vim plugins manager [gmarik/Vundle.vim](https://github.com/gmarik/Vundle.vim)
+
+* YouCompleteMe a vim code-completion engine [Valloric/YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
