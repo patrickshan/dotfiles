@@ -25,9 +25,11 @@ vim ShowTrailingWhitespace-1.01.vmb
 :so %
 ```
 
-* install all the plugins managed by vundle
+* install vundle and all the plugins managed by vundle
 
 ```
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 vim +PluginInstall +qall
 ```
 
