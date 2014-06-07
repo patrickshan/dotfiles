@@ -47,7 +47,7 @@ set autoindent                " always set autoindenting on
 set smartindent               " use smart indent if there is no indent file
 set noerrorbells              " disable error bells
 set vb t_vb=                  " Disable all bells
-
+set mouse=a                   " Enable mouse usage (all modes)
 
 "expand tab with 4 spaces
 set expandtab
@@ -80,3 +80,11 @@ set confirm                 " Y-N-C prompt if closing with unsaved changes
 set foldlevelstart=10
 "set nofoldenable           " disable auto fold
 "
+"
+" configure vim to have Vim jump to the last position when
+" reopening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
+
