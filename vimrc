@@ -24,6 +24,13 @@ Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
 
+" YouCompleteMe configuration
+let g:ycm_server_use_vim_stdout = 1
+let g:ycm_server_log_level = 'debug'
+" python-mode configuration
+let g:pymode_rope_complete_on_dot = 0  " disable autocomplete from python-mode
+
+
 syntax on                     " syntax highlighing
 filetype on                   " try to detect filetypes
 filetype plugin indent on     " enable loading indent file for filetype
@@ -72,3 +79,4 @@ set confirm                 " Y-N-C prompt if closing with unsaved changes
 "set the code fold level
 set foldlevelstart=10
 "set nofoldenable           " disable auto fold
+"

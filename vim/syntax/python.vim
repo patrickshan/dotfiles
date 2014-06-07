@@ -1,1 +1,0 @@
-../pretty-vim-python/syntax/python.vim
