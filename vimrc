@@ -47,7 +47,8 @@ set autoindent                " always set autoindenting on
 set smartindent               " use smart indent if there is no indent file
 set noerrorbells              " disable error bells
 set vb t_vb=                  " Disable all bells
-set mouse=a                   " Enable mouse usage (all modes)
+set mouse=v                   " Enable mouse in visual mode. You can use mouse change
+                              " windows size when using vimdiff or -O/o
 
 "expand tab with 4 spaces
 set expandtab
