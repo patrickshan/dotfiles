@@ -154,6 +154,8 @@ exec /usr/local/bin/pa-applet
 exec gnome-settings-daemon
 exec /usr/bin/nm-applet
 exec /usr/bin/fcitx
+#set random desktop wallpaper
+exec  feh --randomize --bg-fill ~/wallpapers/*
 
 # change output based on result of `xrandr`
 workspace 1 output DP1
