@@ -13,14 +13,21 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " other plugins
+"
 " solarized color scheme plugin by default vundle will use github repo
 Plugin 'altercation/vim-colors-solarized'
+
 " syntastic syntax checking plugin
 Plugin 'scrooloose/syntastic'
+
 " python-mode plugin
 Plugin 'klen/python-mode'
+
 " YouCompleteMe plugin which can automatically do code-completion
 Plugin 'Valloric/YouCompleteMe'
+
+" puppet syntax vim plugin
+Plugin 'puppetlabs/puppet-syntax-vim'
 
 call vundle#end()
 
