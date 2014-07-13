@@ -32,7 +32,7 @@ bindsym $mod+Shift+Q kill
 bindsym $mod+d exec dmenu_run
 
 # Lock the screen
-bindsym $mod+Shift+x exec i3lock -d -i ~/wallpapers/i3lock_screen.png -n
+bindsym $mod+Shift+x exec i3lock -d -i ~/wallpapers/1440_900/i3lock_screen.png -n
 
 # change focus
 bindsym $mod+j focus left
@@ -145,7 +145,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         #status_command i3status
-        status_command py3status -c /home/patrick/.i3/i3status.conf -n 2
+        status_command /var/venv/main/bin/py3status -c /home/patrick/.i3/i3status.conf -n 2
         font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
         font pango:Monospace 8
 }
@@ -153,7 +153,9 @@ bar {
 exec /usr/local/bin/pa-applet
 exec gnome-settings-daemon
 exec /usr/bin/nm-applet
-exec /usr/bin/fcitx
+exec ibus-daemon
+# set random desktop wallpaper
+exec  feh --randomize --bg-fill ~/wallpapers/1440_900/*
 
 # change output based on result of `xrandr`
 workspace 1 output DP1
