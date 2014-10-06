@@ -21,7 +21,7 @@ git clone git@github.com:patrickshan/vim-config.git
 * install ShowTrailingWhitespace:
 
 ```
-vim ShowTrailingWhitespace-1.01.vmb
+vim vim/ShowTrailingWhitespace-1.01.vmb
 :so %
 ```
 
