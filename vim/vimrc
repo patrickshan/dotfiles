@@ -3,6 +3,19 @@ set nocompatible
 
 filetype off                  " required by vundle while you can enable
                               " it after defining vundle
+" Make sure vundle is installed
+" script-variable    s:     Local to a :source'ed Vim script
+let s:InitVundle=0
+let s:VundleDir=expand('~/.vim/bundle/')
+if has('vim_starting')
+    if !isdirectory(s:VundleDir.'Vundle.vim')
+        echo "Installing Vundle.."
+        echo "..."
+        silent !mkdir -p ~/.vim/bundle/
+        silent !git clone https://github.com/patrickshan/Vundle.vim ~/.vim/bundle/Vundle.vim
+        let s:InitVundle=1
+    endif
+endif
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -29,7 +42,17 @@ Plugin 'Valloric/YouCompleteMe'
 " puppet syntax vim plugin
 Plugin 'puppetlabs/puppet-syntax-vim'
 
+" Better session saving support
+Plugin 'tpope/vim-obsession' 
+
 call vundle#end()
+
+if has('vim_starting') && s:InitVundle == 1
+    echo "Install all your plugins..."
+    echo "..."
+    :PluginInstall
+endif
+
 
 " YouCompleteMe configuration
 let g:ycm_server_use_vim_stdout = 1
@@ -88,10 +111,3 @@ set confirm                 " Y-N-C prompt if closing with unsaved changes
 "set the code fold level
 set foldlevelstart=10
 "set nofoldenable           " disable auto fold
-"
-"
-" configure vim to have Vim jump to the last position when
-" reopening a file
-if has("autocmd")
-  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-endif

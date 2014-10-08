@@ -11,12 +11,6 @@ then
 fi
 ln -s `readlink -f ${script_path}/dircolors` ${HOME}/.dircolors
 
-if [ -e ${HOME}/.vimrc ]
-then
-    mv -v ${HOME}/.vimrc ${HOME}/.vimrc.bak.${run_time}
-fi
-ln -s `readlink -f ${script_path}/vimrc` ${HOME}/.vimrc
-
 if [ -e ${HOME}/.vim ] 
 then
     mv -v ${HOME}/.vim ${HOME}/.vim.bak.${run_time}
