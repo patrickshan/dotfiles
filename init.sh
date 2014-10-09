@@ -17,4 +17,10 @@ then
 fi
 ln -s `readlink -f ${script_path}/vim` ${HOME}/.vim
 
+if [ -e ${HOME}/.i3 ] 
+then
+    mv -v ${HOME}/.i3 ${HOME}/.i3.bak.${run_time}
+fi
+ln -s `readlink -f ${script_path}/i3` ${HOME}/.i3
+
 echo "> Please change console profile to use solarized scheme <"
