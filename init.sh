@@ -11,13 +11,13 @@ then
 fi
 ln -s `readlink -f ${script_path}/dircolors` ${HOME}/.dircolors
 
-if [ -e ${HOME}/.vim ] 
+if [ -e ${HOME}/.vim ]
 then
     mv -v ${HOME}/.vim ${HOME}/.vim.bak.${run_time}
 fi
 ln -s `readlink -f ${script_path}/vim` ${HOME}/.vim
 
-if [ -e ${HOME}/.i3 ] 
+if [ -e ${HOME}/.i3 ]
 then
     mv -v ${HOME}/.i3 ${HOME}/.i3.bak.${run_time}
 fi
