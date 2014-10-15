@@ -1,0 +1,2 @@
+"solarized scheme
+colorscheme solarized

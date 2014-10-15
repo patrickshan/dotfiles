@@ -23,9 +23,6 @@ set shiftwidth=4
 "###############################
 "
 set background=dark
-"
-"solarized scheme
-colorscheme solarized
 
 "###############################
 ""# code folding related
