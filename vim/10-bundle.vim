@@ -49,6 +49,9 @@ NeoBundle 'puppetlabs/puppet-syntax-vim'
 " nicer python indent
 NeoBundle 'hynek/vim-python-pep8-indent'
 
+" Git wrapper for vim
+NeoBundle 'tpope/vim-fugitive'
+
 call neobundle#end()
 
 if has('vim_starting') && s:InitNeoBundle == 1
