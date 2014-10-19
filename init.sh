@@ -9,7 +9,13 @@ if [ -e ${HOME}/.dircolors ]
 then
     mv -v ${HOME}/.dircolors ${HOME}/.dircolors.bak.${run_time}
 fi
-ln -s `readlink -f ${script_path}/dircolors` ${HOME}/.dircolors
+ln -s `readlink -f ${script_path}/dircolors-solarized/dircolors.256dark` ${HOME}/.dircolors
+
+if [ -e ${HOME}/.zshrc ]
+then
+    mv -v ${HOME}/.zshrc ${HOME}/.zshrc.bak.${run_time}
+fi
+ln -s `readlink -f ${script_path}/zshrc` ${HOME}/.zshrc
 
 if [ -e ${HOME}/.vim ]
 then
