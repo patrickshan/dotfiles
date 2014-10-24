@@ -55,8 +55,11 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# zsh options
+# enable extended glob for zsh, so you can use something like mv ^bak bak
+setopt extended_glob
+
 export PATH=${HOME}/python/main/bin/:${HOME}/bin:/usr/local/bin:${PATH}:/usr/sbin:/sbin/
-# export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
