@@ -15,8 +15,10 @@ set $mod Mod4
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 #font pango:Monospace 10
 #New font configuration
+#font -wenquanyi-wenquanyi bitmap song-bold-r-normal--*-120-75-75-p-*-iso10646-1
+#font pango:wenquanyi bitmap song bold 10
 font -wenquanyi-wenquanyi bitmap song-bold-r-normal--*-120-75-75-p-*-iso10646-1
-font pango:wenquanyi bitmap song bold 10
+font pango:wenquanyi micro hei 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
