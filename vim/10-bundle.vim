@@ -52,6 +52,9 @@ NeoBundle 'hynek/vim-python-pep8-indent'
 " Git wrapper for vim
 NeoBundle 'tpope/vim-fugitive'
 
+" Salt support for vim
+NeoBundle 'saltstack/salt-vim'
+
 call neobundle#end()
 
 if has('vim_starting') && s:InitNeoBundle == 1

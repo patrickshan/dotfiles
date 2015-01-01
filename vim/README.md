@@ -10,6 +10,8 @@ Install
 
 * vim will automatically install all the plugins during its first run
 
+* Use :NeoBundleUpdate to update/install plugins
+
 Reference
 =========
 
