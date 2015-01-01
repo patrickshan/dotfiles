@@ -59,7 +59,12 @@ source $ZSH/oh-my-zsh.sh
 # enable extended glob for zsh, so you can use something like mv ^bak bak
 setopt extended_glob
 
-export PATH=${HOME}/venv/main/bin/:${HOME}/tools/scripts/:/usr/local/bin:${PATH}:/usr/sbin:/sbin/
+
+export GOPATH=${HOME}/gocode
+export GOROOT=${HOME}/tools/go
+PATH=${GOPATH}/bin:${HOME}/venv/main/bin/:${HOME}/tools/scripts/:/usr/local/bin:${PATH}:/usr/sbin:/sbin/
+export PATH=${PATH}:${GOROOT}/bin
+
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
