@@ -9,7 +9,16 @@ export ZSH=$HOME/tools/dotfiles/oh-my-zsh
 ZSH_THEME="agnoster"
 
 # enable dircolors
-eval `dircolors ${HOME}/.dircolors`
+# eval `dircolors ${HOME}/.dircolors`
+
+# set ls color for Mac
+export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
+
+# mercurial completion
+source /usr/local/share/zsh/site-functions
+
+# FIX ME: need a separated alias file
+alias vi='vim'
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -90,3 +99,5 @@ export PATH=${PATH}:${GOROOT}/bin
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+export GOPATH=${HOME}/gocode
