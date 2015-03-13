@@ -20,6 +20,9 @@ source /usr/local/share/zsh/site-functions
 # FIX ME: need a separated alias file
 alias vi='vim'
 
+# make sure grep display color even after piping to another grep which is used by -v
+alias grep='grep --color=always'
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -71,7 +74,7 @@ setopt extended_glob
 
 export GOPATH=${HOME}/gocode
 export GOROOT=${HOME}/tools/go
-PATH=${GOPATH}/bin:${HOME}/venv/main/bin/:${HOME}/tools/scripts/:/usr/local/bin:${PATH}:/usr/sbin:/sbin/
+PATH=${GOPATH}/bin:${HOME}/venv/main/bin/:${HOME}/tools/scripts/:${HOME}/tools/bin/:/usr/local/bin:${PATH}:/usr/sbin:/sbin/
 export PATH=${PATH}:${GOROOT}/bin
 
 
