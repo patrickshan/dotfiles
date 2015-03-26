@@ -1,0 +1,19 @@
+# Use 256 colors
+term screen-256color
+
+# new statusbar
+hardstatus off
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W} %c %{g}]'
+
+# Turn off welcome message
+startup_message off
+
+# Turn off visual bell
+vbell off
+
+# Use X scrolling mechanism
+termcapinfo xterm* ti@:te@
+
+# initialize $SHELL as a login shell
+shell -$SHELL
