@@ -104,3 +104,6 @@ export PATH=${PATH}:${GOROOT}/bin
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 export GOPATH=${HOME}/gocode
+
+# enable comment in interactive mode
+setopt interactivecomments
