@@ -55,6 +55,9 @@ NeoBundle 'tpope/vim-fugitive'
 " Salt support for vim
 NeoBundle 'saltstack/salt-vim'
 
+" Golang support for vim
+NeoBundle 'fatih/vim-go'
+
 call neobundle#end()
 
 if has('vim_starting') && s:InitNeoBundle == 1
