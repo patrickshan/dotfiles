@@ -74,7 +74,7 @@ setopt extended_glob
 
 export GOPATH=${HOME}/gocode
 export GOROOT=${HOME}/tools/go
-PATH=${GOPATH}/bin:${HOME}/venv/main/bin/:${HOME}/tools/scripts/:${HOME}/tools/bin/:/usr/local/bin:${PATH}:/usr/sbin:/sbin/
+PATH=/opt/android-studio/bin:${GOPATH}/bin:${HOME}/venv/main/bin/:${HOME}/tools/scripts/:/usr/local/bin:${PATH}:/usr/sbin:/sbin/
 export PATH=${PATH}:${GOROOT}/bin
 
 
