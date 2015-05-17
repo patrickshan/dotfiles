@@ -107,3 +107,11 @@ export GOPATH=${HOME}/gocode
 
 # enable comment in interactive mode
 setopt interactivecomments
+
+# creat symlink for valid ssh_auth_sock as required
+CURRENT_SSH_AUTH_SOCK=`readlink ${HOME}/.ssh/ssh_auth_sock`
+if [ "$SSH_AUTH_SOCK" != "${HOME}/.ssh/ssh_auth_sock" -a "$SSH_AUTH_SOCK" != "$CURRENT_SSH_AUTH_SOCK" ]
+then
+        ln -sf $SSH_AUTH_SOCK ${HOME}/.ssh/ssh_auth_sock
+fi
+

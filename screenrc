@@ -17,3 +17,6 @@ termcapinfo xterm* ti@:te@
 
 # initialize $SHELL as a login shell
 shell -$SHELL
+
+# make forwarded ssh key work with screen
+setenv SSH_AUTH_SOCK $HOME/.ssh/ssh_auth_sock
