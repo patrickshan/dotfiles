@@ -2,11 +2,12 @@ syntax on                     " syntax highlighing
 filetype on                   " try to detect filetypes
 filetype plugin indent on     " enable loading indent file for filetype
 set list                      " list some special characters
+set listchars=tab:>−          " display tab as '>-'
 set number                    " Display line numbers
 set wildmenu                  " Menu completion in command mode on <Tab>
 set wildmode=full             " <Tab> cycles between all matching choices.
 set colorcolumn=128           " Color column limit
-set ruler                     " show the cusor position all the time 
+set ruler                     " show the cusor position all the time
 set cursorline                " display a line to indicate cursor location
 "set cursorcolumn             " highlight cursor column
 set linebreak                 " don't wrap text in the middle of a word
