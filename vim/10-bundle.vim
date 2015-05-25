@@ -38,12 +38,12 @@ NeoBundle 'itchyny/lightline.vim'
 " python-mode plugin
 NeoBundle 'klen/python-mode'
 " YouCompleteMe plugin which can automatically do code-completion
-NeoBundle 'Valloric/YouCompleteMe', {
-            \   'build': {
-            \       'unix': './install.sh',
-            \       'mac': './install.sh'
-            \   }
-            \}
+" NeoBundle 'Valloric/YouCompleteMe', {
+"             \   'build': {
+"             \       'unix': './install.sh',
+"             \       'mac': './install.sh'
+"             \   }
+"             \}
 " puppet syntax vim plugin
 NeoBundle 'puppetlabs/puppet-syntax-vim'
 " nicer python indent

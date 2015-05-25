@@ -33,6 +33,6 @@ set foldlevelstart=10
 "set nofoldenable           " disable auto fold
 "
 " set color to 256 if it's not in gui
-if !has('gui_running')
-      set t_Co=256
-endif
+" if !has('gui_running')
+"       set t_Co=256
+" endif
