@@ -2,7 +2,7 @@
 set nocompatible
 
 " configure viminfo (Ref :h options and /viminfo)
-" this will make viminfo to remember last 20 files marks with 
+" this will make viminfo to remember last 20 files marks with
 " 600 line for each register and 20 history commands
 " maximum size of an item is 12KB
 set viminfo='20,<600,:20,s12,n~/.viminfo
