@@ -1,6 +1,6 @@
 " python-mode configuration
 " max line length
-let g:pymode_options_max_line_length = 90
+let g:pymode_options_max_line_length = 100
 
 " code checkers configuration for pymode
 let g:pymode_lint_checkers = ['pyflakes', 'pep8', 'mccabe']

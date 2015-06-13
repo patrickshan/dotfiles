@@ -1,16 +1,33 @@
 vim-config
 ==========
 
-My vim configuration
+vim configuration
 
 Install
 =======
 
 * clone this repo
 
+* create symlink from ${HOME}/.vim to this directory
+
 * vim will automatically install all the plugins during its first run
 
 * Use :NeoBundleUpdate to update/install plugins
+
+Shortcuts
+=========
+
+Most of these shortcuts are used in normal mode by default
+
+|Key combination  | Description
+|:--------------- | :---------------------------
+|&lt;Leader&gt;c        | :PymodeLint &lt;CR&gt;
+|&lt;Leader&gt;w        | Ctrl+w switch between views
+|&lt;Leader&gt;u        | switch upper level between views
+|&lt;Leader&gt;d        | switch lower level between views
+|&lt;Leader&gt;W        | save file
+|&lt;Leader&gt;v        | visual mode blockwise
+|&lt;Leader&gt;&lt;Leader&gt; | visual mode linewise
 
 Reference
 =========
