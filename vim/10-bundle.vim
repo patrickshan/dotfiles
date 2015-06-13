@@ -58,6 +58,17 @@ NeoBundle 'saltstack/salt-vim'
 " Golang support for vim
 NeoBundle 'fatih/vim-go'
 
+" vimproc
+NeoBundle 'Shougo/vimproc.vim', {
+\ 'build' : {
+\     'windows' : 'tools\\update-dll-mingw',
+\     'cygwin' : 'make -f make_cygwin.mak',
+\     'mac' : 'make -f make_mac.mak',
+\     'linux' : 'make',
+\     'unix' : 'gmake',
+\    },
+\ }
+
 call neobundle#end()
 
 if has('vim_starting') && s:InitNeoBundle == 1
