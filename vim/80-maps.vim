@@ -17,6 +17,11 @@ let mapleader="\<Space>"
 " they are recursive and non-recursive versions of the various mapping commands
 " noremap won't recursivly map/parse the right part of map formula
 
+" File modification related
+" enter paste mode
+nnoremap <Leader>p :set paste <CR>
+" save file
+nnoremap <Leader>W :w <CR>
 
 " do syntax check
 nmap <Leader>c :PymodeLint <CR>
@@ -25,9 +30,6 @@ nmap <Leader>c :PymodeLint <CR>
 nmap <Leader>w <C-w>
 nmap <Leader>u :wincmd k <CR>
 nmap <Leader>d :wincmd j <CR>
-
-" save file
-nnoremap <Leader>W :w <CR>
 
 " enter visual mode blockwise
 nmap <Leader>v <C-v>
