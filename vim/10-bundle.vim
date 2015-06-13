@@ -69,6 +69,9 @@ NeoBundle 'Shougo/vimproc.vim', {
 \    },
 \ }
 
+" ack search module
+NeoBundle 'mileszs/ack.vim'
+
 call neobundle#end()
 
 if has('vim_starting') && s:InitNeoBundle == 1
