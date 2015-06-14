@@ -72,6 +72,9 @@ NeoBundle 'Shougo/vimproc.vim', {
 " ack search module
 NeoBundle 'mileszs/ack.vim'
 
+" vim tmux navigator
+NeoBundle 'christoomey/vim-tmux-navigator'
+
 call neobundle#end()
 
 if has('vim_starting') && s:InitNeoBundle == 1
