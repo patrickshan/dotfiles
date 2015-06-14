@@ -21,7 +21,7 @@ let mapleader="\<Space>"
 " enter paste mode
 nnoremap <Leader>p :set paste <CR>
 " save file
-nnoremap <Leader>W :w <CR>
+nnoremap <Leader>s :w <CR>
 
 " do syntax check
 nmap <Leader>c :PymodeLint <CR>
