@@ -58,6 +58,10 @@ NeoBundle 'saltstack/salt-vim'
 " Golang support for vim
 NeoBundle 'fatih/vim-go'
 
+" Nerd tree
+NeoBundle "scrooloose/nerdtree"
+NeoBundle "Xuyuanp/nerdtree-git-plugin"
+
 " vimproc
 NeoBundle 'Shougo/vimproc.vim', {
 \ 'build' : {

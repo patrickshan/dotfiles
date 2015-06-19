@@ -30,8 +30,13 @@ nmap <Leader>c :PymodeLint <CR>
 nmap <Leader>w <C-w>
 nmap <Leader>u :wincmd k <CR>
 nmap <Leader>d :wincmd j <CR>
+nmap <Leader>l :wincmd h <CR>
+nmap <Leader>r :wincmd l <CR>
 
 " enter visual mode blockwise
 nmap <Leader>v <C-v>
 " enter visual mode linewise
 nmap <Leader><Leader> V
+
+" enable Nerdtree
+map <Leader>n :NERDTreeToggle <CR>
