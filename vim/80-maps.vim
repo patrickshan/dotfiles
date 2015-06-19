@@ -28,10 +28,10 @@ nmap <Leader>c :PymodeLint <CR>
 
 " map move between viewports
 nmap <Leader>w <C-w>
-nmap <Leader>u :wincmd k <CR>
-nmap <Leader>d :wincmd j <CR>
-nmap <Leader>l :wincmd h <CR>
-nmap <Leader>r :wincmd l <CR>
+nmap <Leader>k :wincmd k <CR>
+nmap <Leader>j :wincmd j <CR>
+nmap <Leader>h :wincmd h <CR>
+nmap <Leader>l :wincmd l <CR>
 
 " enter visual mode blockwise
 nmap <Leader>v <C-v>
