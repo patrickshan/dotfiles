@@ -73,8 +73,7 @@ setopt extended_glob
 
 
 export GOPATH=${HOME}/gocode
-PATH=/opt/android-studio/bin:${GOPATH}/bin:${HOME}/venv/main/bin/:${HOME}/tools/scripts/:/usr/local/bin:${PATH}:/usr/sbin:/sbin/
-export PATH=${PATH}:${GOROOT}/bin
+PATH=/opt/android-studio/bin:/usr/local/go/bin:${HOME}/venv/main/bin/:${HOME}/tools/scripts/:/usr/local/bin:${PATH}:/usr/sbin:/sbin/
 
 
 # You may need to manually set your language environment
@@ -102,7 +101,6 @@ export PATH=${PATH}:${GOROOT}/bin
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-export GOPATH=${HOME}/gocode
 export HOMEBREW_GITHUB_API_TOKEN=a490737014f2a9802ac5de7cce57f0830a883070
 
 # enable comment in interactive mode
