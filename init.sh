@@ -32,4 +32,6 @@ updatelink 'screenrc'
 
 updatelink 'ackrc'
 
+git submodule update --init --recursive
+
 echo "> Please change console profile to use solarized scheme <"
