@@ -1,6 +1,6 @@
 [submodule "dircolors-solarized"]
 	path = dircolors-solarized
-	url = git@github.com:patrickshan/dircolors-solarized.git
+	url = https://github.com/patrickshan/dircolors-solarized.git
 [submodule "oh-my-zsh"]
 	path = oh-my-zsh
-	url = git@github.com:patrickshan/oh-my-zsh.git
+	url = https://github.com/patrickshan/oh-my-zsh.git
