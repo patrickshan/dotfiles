@@ -1,23 +1,31 @@
 #!/bin/bash
 
-script_name=`readlink -f ${0}`
-script_path=`dirname ${script_name}`
 
 run_time=`date +%Y%m%d%H%M`
 
+if [[ `uname` == 'Darwin' ]]; then
+    if ! which greadlink 2>&1 >/dev/null
+    then
+        echo "Please install coreutils first:\n\tbrew install coreutils"
+        exit 2
+    fi
+    readlink_cmd='greadlink'
+else
+    readlink_cmd='readlink'
+fi
+
+script_name=`${readlink_cmd} -f ${0}`
+script_path=`dirname ${script_name}`
+
 function updatelink {
     $confname = $1
-    $sourcename = $2
-    if [[ $sourcename == '' ]]
-    then
-        $sourcename=$confname
-    fi
+    $sourcename = ${2:=$confname}
 
     if [[ -e ${HOME}/.$confname ]]
     then
         mv -v ${HOME}/.$confname ${HOME}/.$confname.bak.${run_time}
     fi
-    ln -s `readlink -f ${script_path}/$sourcename` ${HOME}/.$confname
+    ln -s `${script_path}/$sourcename` ${HOME}/.$confname
 }
 
 updatelink 'dircolors' 'dircolors-solarized/dircolors.256dark'
