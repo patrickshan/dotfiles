@@ -83,7 +83,7 @@ class GetData:
         # Run 'free -m' command and make a list from output.
         mem_data = self.execCMD('free', '-m').split()
         total_mem = int(mem_data[7]) / 1024.
-        used_mem = int(mem_data[15]) / 1024.
+        used_mem = int(mem_data[8]) / 1024.
         # Caculate percentage
         used_mem_percent = int(used_mem / (total_mem / 100))
 
