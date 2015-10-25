@@ -18,14 +18,14 @@ script_name=`${readlink_cmd} -f ${0}`
 script_path=`dirname ${script_name}`
 
 function updatelink {
-    $confname = $1
-    $sourcename = ${2:=$confname}
+    confname=$1
+    sourcename=${2:-$confname}
 
     if [[ -e ${HOME}/.$confname ]]
     then
         mv -v ${HOME}/.$confname ${HOME}/.$confname.bak.${run_time}
     fi
-    ln -s `${script_path}/$sourcename` ${HOME}/.$confname
+    ln -sf ${script_path}/$sourcename ${HOME}/.$confname
 }
 
 updatelink 'dircolors' 'dircolors-solarized/dircolors.256dark'
