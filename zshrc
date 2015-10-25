@@ -52,7 +52,7 @@ DISABLE_AUTO_UPDATE="true"
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="yyyy-mm-dd"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -71,10 +71,8 @@ source $ZSH/oh-my-zsh.sh
 # enable extended glob for zsh, so you can use something like mv ^bak bak
 setopt extended_glob
 
-
 export GOPATH=${HOME}/gocode
 PATH=/opt/android-studio/bin:/usr/local/go/bin:${HOME}/venv/main/bin/:${HOME}/tools/scripts/:/usr/local/bin:${PATH}:/usr/sbin:/sbin/
-
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -85,6 +83,8 @@ PATH=/opt/android-studio/bin:/usr/local/go/bin:${HOME}/venv/main/bin/:${HOME}/to
 # else
 #   export EDITOR='mvim'
 # fi
+# Always prefer vim
+export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -112,4 +112,3 @@ if [ "$SSH_AUTH_SOCK" != "${HOME}/.ssh/ssh_auth_sock" -a "$SSH_AUTH_SOCK" != "$C
 then
         ln -sf $SSH_AUTH_SOCK ${HOME}/.ssh/ssh_auth_sock
 fi
-
