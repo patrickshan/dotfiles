@@ -101,7 +101,6 @@ PATH=/opt/android-studio/bin:/usr/local/go/bin:${HOME}/venv/main/bin/:${HOME}/to
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-export HOMEBREW_GITHUB_API_TOKEN=a490737014f2a9802ac5de7cce57f0830a883070
 
 # enable comment in interactive mode
 setopt interactivecomments
