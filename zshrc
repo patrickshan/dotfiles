@@ -111,3 +111,5 @@ if [ "$SSH_AUTH_SOCK" != "${HOME}/.ssh/ssh_auth_sock" -a "$SSH_AUTH_SOCK" != "$C
 then
         ln -sf $SSH_AUTH_SOCK ${HOME}/.ssh/ssh_auth_sock
 fi
+
+source ${HOME}/tools/dotfiles/credentials.sh
