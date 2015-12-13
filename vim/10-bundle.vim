@@ -40,8 +40,8 @@ NeoBundle 'klen/python-mode'
 " YouCompleteMe plugin which can automatically do code-completion
 NeoBundle 'Valloric/YouCompleteMe', {
             \   'build': {
-            \       'unix': './install.sh',
-            \       'mac': './install.sh'
+            \       'unix': './install.py',
+            \       'mac': './install.py'
             \   }
             \}
 " puppet syntax vim plugin
