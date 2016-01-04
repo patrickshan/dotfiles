@@ -40,6 +40,10 @@ updatelink 'screenrc'
 
 updatelink 'ackrc'
 
+if [[ `uname` == 'Darwin' ]]; then
+    updatelink 'Brewfile'
+fi
+
 git submodule update --init --recursive
 
 echo "> Please change console profile to use solarized scheme <"
