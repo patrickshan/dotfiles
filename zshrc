@@ -113,3 +113,8 @@ then
 fi
 
 source ${HOME}/tools/dotfiles/credentials.sh
+
+# add pyenv configuration
+if which pyenv > /dev/null; then
+    eval "$(pyenv init -)";
+fi
