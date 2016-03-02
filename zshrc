@@ -118,3 +118,7 @@ source ${HOME}/tools/dotfiles/credentials.sh
 if which pyenv > /dev/null; then
     eval "$(pyenv init -)";
 fi
+
+_prompt_and_resched() { sched +1 _prompt_and_resched; zle && zle reset-prompt }
+_prompt_and_resched
+PS1="%D{%H:%M:%S} $PS1"
