@@ -118,3 +118,5 @@ source ${HOME}/tools/dotfiles/credentials.sh
 if which pyenv > /dev/null; then
     eval "$(pyenv init -)";
 fi
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
