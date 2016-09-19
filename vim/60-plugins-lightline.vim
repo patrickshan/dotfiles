@@ -4,7 +4,7 @@ set laststatus=2
 set noshowmode
 
 let g:lightline = {
-      \ 'colorscheme': 'solarized_dark',
+      \ 'colorscheme': 'solarized',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
