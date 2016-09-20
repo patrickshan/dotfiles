@@ -152,7 +152,7 @@ bar {
         font pango:Monospace 8
 }
 
-exec /usr/local/bin/pa-applet
+exec /usr/bin/volumeicon
 exec /usr/bin/nm-applet
 exec ibus-daemon
 # set random desktop wallpaper
