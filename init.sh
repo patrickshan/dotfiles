@@ -38,7 +38,7 @@ updatelink 'i3'
 
 updatelink 'screenrc'
 
-updatelink 'ackrc'
+updatelink 'gitconfig'
 
 if [[ `uname` == 'Darwin' ]]; then
     updatelink 'Brewfile'

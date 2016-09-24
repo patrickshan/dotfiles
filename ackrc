@@ -1,8 +1,0 @@
-# ignore backup directory
---ignore-dir=.backup
-
-# always sort files
---sort-files
-
-# use less as pager
---pager=less

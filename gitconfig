@@ -1,0 +1,9 @@
+[user]
+name = Patrick Shan
+email = patrickshan.syd@gmail.com
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	last = log -1 HEAD
