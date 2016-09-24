@@ -156,7 +156,7 @@ exec /usr/bin/volumeicon
 exec /usr/bin/nm-applet
 exec ibus-daemon
 # set random desktop wallpaper
-exec  feh --randomize --bg-fill ~/wallpapers/1440_900/*
+exec  feh --randomize --bg-fill ~/wallpapers/1920_1080/*
 
 # change output based on result of `xrandr`
 workspace 1 output DP1
@@ -170,4 +170,4 @@ bindsym $mod+p exec ~/tools/scripts/screenshot.sh
 
 # open application when i3 starts
 exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/gnome-terminal'
-exec --no-startup-id i3-msg 'workspace 2; exec /usr/bin/iceweasel'
+exec --no-startup-id i3-msg 'workspace 2; exec /usr/bin/chromium'
