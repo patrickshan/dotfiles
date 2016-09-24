@@ -40,6 +40,8 @@ updatelink 'screenrc'
 
 updatelink 'gitconfig'
 
+updatelink 'mplayer'
+
 if [[ `uname` == 'Darwin' ]]; then
     updatelink 'Brewfile'
 fi

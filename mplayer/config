@@ -1,0 +1,12 @@
+# Write your default config options here!
+font=/usr/share/fonts/truetype/msttcorefonts/impact.ttf
+
+# subtitle font
+subfont-text-scale = "2"
+subfont-blur = "4"
+subfont-outline = "4"
+
+# font of onscreen display (OSD) for status information
+subfont-osd-scale = "2"
+
+
