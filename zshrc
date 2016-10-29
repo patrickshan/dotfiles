@@ -121,3 +121,9 @@ fi
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 test -e "/Users/pshan/repos/awscli-saml-auth/zshrc_additions" && source /Users/pshan/repos/awscli-saml-auth/zshrc_additions
+
+# add a alias for docker when using Linux
+if [ `uname` = 'Linux' ]
+then
+    alias docker='sudo /usr/bin/docker'
+fi
