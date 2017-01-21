@@ -170,4 +170,4 @@ bindsym $mod+p exec ~/tools/scripts/screenshot.sh
 
 # open application when i3 starts
 exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/gnome-terminal'
-exec --no-startup-id i3-msg 'workspace 2; exec /usr/bin/chromium'
+exec --no-startup-id i3-msg 'workspace 2; exec /usr/bin/firefox'
