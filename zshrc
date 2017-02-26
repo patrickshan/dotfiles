@@ -72,7 +72,7 @@ source $ZSH/oh-my-zsh.sh
 setopt extended_glob
 
 export GOPATH=${HOME}/gocode
-PATH=/home/patrick/.pyenv/shims:/home/patrick/javascript/node/bin:/opt/android-studio/bin:/usr/local/go/bin:${HOME}/venv/main/bin:${HOME}/tools/scripts:/usr/local/bin:${PATH}:/usr/sbin:/sbin
+PATH=/home/patrick/.pyenv/shims:/home/patrick/javascript/node/bin:$(go env GOPATH)/bin:/usr/local/go/bin:${HOME}/venv/main/bin:${HOME}/tools/scripts:/usr/local/bin:${PATH}:/usr/sbin:/sbin
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -120,7 +120,7 @@ if which pyenv > /dev/null; then
 fi
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-test -e "/Users/pshan/repos/awscli-saml-auth/zshrc_additions" && source /Users/pshan/repos/awscli-saml-auth/zshrc_additions
+test -e "${HOME}/repos/awscli-saml-auth/zshrc_additions" && source ${HOME}/repos/awscli-saml-auth/zshrc_additions
 
 # add a alias for docker when using Linux
 if [ `uname` = 'Linux' ]
