@@ -1,3 +1,6 @@
+# set CDPATH variable
+export CDPATH=".:~:~/repos:$(go env GOPATH)/src"
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/tools/dotfiles/oh-my-zsh
 
@@ -128,5 +131,3 @@ then
     alias docker='sudo /usr/bin/docker'
 fi
 
-# set CDPATH variable
-export CDPATH=".:~:~/repos:${GOPATH}/src"
