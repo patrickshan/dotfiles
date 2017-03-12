@@ -127,3 +127,6 @@ if [ `uname` = 'Linux' ]
 then
     alias docker='sudo /usr/bin/docker'
 fi
+
+# set CDPATH variable
+export CDPATH=".:~:~/repos:${GOPATH}/src"

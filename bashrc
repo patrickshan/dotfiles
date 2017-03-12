@@ -130,3 +130,6 @@ export EDITOR=vim
 PATH=/var/venv/main/bin:${HOME}/tools/scripts/:/usr/local/bin:/sbin:${HOME}/tools/arc/arcanist/bin:$PATH:
 # make it colorful
 export TERM=xterm-256color
+
+# set CDPATH variable
+export CDPATH=".:~:~/repos:${GOPATH}/src"
