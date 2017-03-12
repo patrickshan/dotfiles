@@ -72,7 +72,7 @@ source $ZSH/oh-my-zsh.sh
 setopt extended_glob
 
 export GOPATH=${HOME}/gocode
-PATH=/home/patrick/.pyenv/shims:/home/patrick/javascript/node/bin:/opt/android-studio/bin:/usr/local/go/bin:${HOME}/venv/main/bin:${HOME}/tools/scripts:/usr/local/bin:${PATH}:/usr/sbin:/sbin
+PATH=${GOPATH}/bin:/home/patrick/.pyenv/shims:/home/patrick/javascript/node/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/go/bin:${HOME}/venv/main/bin:${HOME}/tools/scripts:/usr/local/bin:${PATH}:/usr/sbin:/sbin
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
