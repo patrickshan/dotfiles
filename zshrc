@@ -1,3 +1,7 @@
+
+# needs go binary to set other paths
+PATH=$PATH:/usr/local/go/bin
+
 # set CDPATH variable
 export CDPATH=".:~:~/repos:$(go env GOPATH)/src"
 
