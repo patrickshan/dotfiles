@@ -82,6 +82,9 @@ NeoBundle 'christoomey/vim-tmux-navigator'
 " vim terraform integration
 NeoBundle 'hashivim/vim-terraform'
 
+" vim yaml plugin
+NeoBundle 'avakhov/vim-yaml'
+
 call neobundle#end()
 
 if has('vim_starting') && s:InitNeoBundle == 1
