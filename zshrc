@@ -1,6 +1,6 @@
 
 # needs go binary to set other paths
-PATH=$PATH:/usr/local/go/bin
+PATH=$PATH:/usr/local/bin:/usr/local/go/bin
 export GOPATH=${HOME}/gocode
 
 # set CDPATH variable
@@ -114,7 +114,7 @@ setopt interactivecomments
 
 # creat symlink for valid ssh_auth_sock as required
 CURRENT_SSH_AUTH_SOCK=`readlink ${HOME}/.ssh/ssh_auth_sock`
-if [ "$SSH_AUTH_SOCK" != "${HOME}/.ssh/ssh_auth_sock" -a "$SSH_AUTH_SOCK" != "$CURRENT_SSH_AUTH_SOCK" ]
+if [[ "$SSH_AUTH_SOCK" != "${HOME}/.ssh/ssh_auth_sock" && "$SSH_AUTH_SOCK" != "$CURRENT_SSH_AUTH_SOCK" ]]
 then
         ln -sf $SSH_AUTH_SOCK ${HOME}/.ssh/ssh_auth_sock
 fi
@@ -130,8 +130,13 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 test -e "${HOME}/repos/awscli-saml-auth/zshrc_additions" && source ${HOME}/repos/awscli-saml-auth/zshrc_additions
 
 # add a alias for docker when using Linux
-if [ `uname` = 'Linux' ]
+if [[ `uname` = 'Linux' ]]
 then
     alias docker='sudo /usr/bin/docker'
 fi
 
+# include kubectl auto-completion
+if type "kubectl" > /dev/null
+then
+    source <(kubectl completion zsh)
+fi
