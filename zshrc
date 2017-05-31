@@ -1,6 +1,7 @@
 
 # needs go binary to set other paths
 PATH=$PATH:/usr/local/go/bin
+export GOPATH=${HOME}/gocode
 
 # set CDPATH variable
 export CDPATH=".:~:~/repos:$(go env GOPATH)/src"
@@ -78,7 +79,6 @@ source $ZSH/oh-my-zsh.sh
 # enable extended glob for zsh, so you can use something like mv ^bak bak
 setopt extended_glob
 
-export GOPATH=${HOME}/gocode
 PATH=$(go env GOPATH)/bin:/home/patrick/.pyenv/shims:/home/patrick/javascript/node/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/go/bin:${HOME}/venv/main/bin:${HOME}/tools/scripts:/usr/local/bin:${PATH}:/usr/sbin:/sbin
 
 # You may need to manually set your language environment
