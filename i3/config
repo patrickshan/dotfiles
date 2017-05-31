@@ -158,6 +158,9 @@ exec ibus-daemon
 # set random desktop wallpaper
 exec  feh --randomize --bg-fill ~/wallpapers/1920_1080/*
 
+# clipboard manager
+exec --no-startup-id /usr/bin/parcellite
+
 # change output based on result of `xrandr`
 workspace 1 output DP1
 #workspace 2 output DP1
