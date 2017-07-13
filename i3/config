@@ -34,7 +34,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec dmenu_run
 
 # Lock the screen
-bindsym $mod+Shift+x exec i3lock -d -i ~/wallpapers/1440_900/i3lock_screen.png -n
+bindsym $mod+Shift+x exec i3lock -d -i ~/wallpapers/1920_1080/i3lock_screen.png -n
 
 # change focus
 bindsym $mod+j focus left
