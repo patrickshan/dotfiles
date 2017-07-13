@@ -128,6 +128,11 @@ fi
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 test -e "${HOME}/repos/awscli-saml-auth/zshrc_additions" && source ${HOME}/repos/awscli-saml-auth/zshrc_additions
+# Load virtualenvwrapper functions
+venvwrap="$(/usr/bin/which virtualenvwrapper.sh)"
+if [[ -f ${venvwrap} ]]; then
+   source $venvwrap
+fi
 
 # add a alias for docker when using Linux
 if [[ `uname` = 'Linux' ]]
