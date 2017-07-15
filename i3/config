@@ -17,7 +17,7 @@ set $mod Mod4
 #New font configuration
 #font -wenquanyi-wenquanyi bitmap song-bold-r-normal--*-120-75-75-p-*-iso10646-1
 #font pango:wenquanyi bitmap song bold 10
-font -wenquanyi-wenquanyi bitmap song-bold-r-normal--*-120-75-75-p-*-iso10646-1
+#font -wenquanyi-wenquanyi bitmap song-bold-r-normal--*-120-75-75-p-*-iso10646-1
 font pango:wenquanyi micro hei 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -34,7 +34,13 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec dmenu_run
 
 # Lock the screen
-bindsym $mod+Shift+x exec i3lock -d -i ~/wallpapers/1920_1080/i3lock_screen.png -n
+bindsym $mod+Shift+x exec i3lock -d -i ~/wallpapers/1920_1080/i3lock_screen_2.png -n
+
+# Display brightness control
+# Increase brightness
+bindsym $mod+Shift+i exec echo $(expr $(cat /sys/class/backlight/intel_backlight/brightness) + 50) | sudo tee /sys/class/backlight/intel_backlight/brightness
+# Decrease brightness
+bindsym $mod+Shift+r exec echo $(expr $(cat /sys/class/backlight/intel_backlight/brightness) - 50) | sudo tee /sys/class/backlight/intel_backlight/brightness
 
 # change focus
 bindsym $mod+j focus left
