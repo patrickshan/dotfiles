@@ -40,7 +40,7 @@ bindsym $mod+Shift+x exec i3lock -d -i ~/wallpapers/1920_1080/i3lock_screen_2.pn
 # Increase brightness
 bindsym $mod+Shift+i exec echo $(expr $(cat /sys/class/backlight/intel_backlight/brightness) + 50) | sudo tee /sys/class/backlight/intel_backlight/brightness
 # Decrease brightness
-bindsym $mod+Shift+r exec echo $(expr $(cat /sys/class/backlight/intel_backlight/brightness) - 50) | sudo tee /sys/class/backlight/intel_backlight/brightness
+bindsym $mod+Shift+o exec echo $(expr $(cat /sys/class/backlight/intel_backlight/brightness) - 50) | sudo tee /sys/class/backlight/intel_backlight/brightness
 
 # change focus
 bindsym $mod+j focus left
