@@ -1,0 +1,13 @@
+// Place your settings in this file to overwrite the default settings
+// Linux: $HOME/.config/Code/User/settings.json
+// Mac: $HOME/Library/Application Support/Code/User/settings.json
+// Windows: %APPDATA%\Code\User\settings.json
+{
+    "editor.fontFamily": "'Inconsolata'",
+    "editor.fontSize": 18,
+    "go.gopath": "/home/patrick/gocode",
+    "terminal.integrated.fontSize": 18,
+    "go.docsTool": "gogetdoc",
+    "go.useLanguageServer": true,
+    "workbench.editor.enablePreview": false,
+}
