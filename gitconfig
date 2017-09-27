@@ -7,3 +7,4 @@ email = patrickshan.syd@gmail.com
 	ci = commit
 	st = status
 	last = log -1 HEAD
+	git = !exec git
