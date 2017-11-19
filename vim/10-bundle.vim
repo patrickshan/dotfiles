@@ -56,6 +56,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'saltstack/salt-vim'
 
 " Golang support for vim
+" Run `GoInstallBinaries` after install
 NeoBundle 'fatih/vim-go'
 
 " Nerd tree
@@ -91,4 +92,6 @@ if has('vim_starting') && s:InitNeoBundle == 1
     " Install all the plugins registered in Vundle
     echo "Install all your plugins..."
     NeoBundleInstall
+    " install go library binaries
+    GoInstallBinaries
 endif
