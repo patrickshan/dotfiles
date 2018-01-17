@@ -8,6 +8,7 @@
     "go.gopath": "/home/patrick/gocode",
     "terminal.integrated.fontSize": 18,
     "go.docsTool": "gogetdoc",
+    "go.formatTool": "goimports",
     "go.useLanguageServer": true,
     "workbench.editor.enablePreview": false,
 }
