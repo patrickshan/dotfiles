@@ -4,7 +4,7 @@ PATH=$PATH:/usr/local/bin:/usr/local/go/bin
 export GOPATH=${HOME}/gocode
 
 # set CDPATH variable
-export CDPATH=".:~:~/repos:$(go env GOPATH)/src"
+export CDPATH=".:${HOME}:${HOME}/repos:$(go env GOPATH)/src"
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/tools/dotfiles/oh-my-zsh
@@ -79,7 +79,7 @@ source $ZSH/oh-my-zsh.sh
 # enable extended glob for zsh, so you can use something like mv ^bak bak
 setopt extended_glob
 
-PATH=$(go env GOPATH)/bin:/home/patrick/.pyenv/shims:/home/patrick/javascript/node/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/go/bin:${HOME}/venv/main/bin:${HOME}/tools/scripts:/usr/local/bin:${PATH}:/usr/sbin:/sbin
+PATH=$(go env GOPATH)/bin:/home/patrick/javascript/node/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/go/bin:${HOME}/venv/main/bin:${HOME}/tools/scripts:/usr/local/bin:${PATH}:/usr/sbin:/sbin
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -127,7 +127,6 @@ if which pyenv > /dev/null; then
 fi
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-test -e "${HOME}/repos/awscli-saml-auth/zshrc_additions" && source ${HOME}/repos/awscli-saml-auth/zshrc_additions
 # Load virtualenvwrapper functions
 venvwrap="$(/usr/bin/which virtualenvwrapper.sh)"
 if [[ -f ${venvwrap} ]]; then
@@ -144,4 +143,9 @@ fi
 if type "kubectl" > /dev/null
 then
     source <(kubectl completion zsh)
+fi
+source ${HOME}/tools/z/z.sh
+
+if [[ -f ${HOME}/venv/main/share/cloudtoken/shell_additions/bashrc_additions ]]; then
+    source ${HOME}/venv/main/share/cloudtoken/shell_additions/bashrc_additions
 fi
