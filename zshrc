@@ -145,7 +145,7 @@ then
     source <(kubectl completion zsh)
 fi
 
-source ${HOME}/tools/dotfiles/oh-my-zsh/plugins/z.sh
+source ${HOME}/tools/dotfiles/oh-my-zsh/plugins/z/z.sh
 
 if [[ -f ${HOME}/venv/main/share/cloudtoken/shell_additions/bashrc_additions ]]; then
     source ${HOME}/venv/main/share/cloudtoken/shell_additions/bashrc_additions
