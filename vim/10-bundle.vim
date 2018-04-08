@@ -92,6 +92,9 @@ NeoBundle 'mbbill/undotree'
 " autoclose
 NeoBundle 'vim-scripts/AutoClose'
 
+" Add CtrlP
+NeoBundle "kien/ctrlp.vim"
+
 call neobundle#end()
 
 if has('vim_starting') && s:InitNeoBundle == 1

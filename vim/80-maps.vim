@@ -42,3 +42,5 @@ nmap <Leader><Leader> V
 map <Leader>n :NERDTreeToggle <CR>
 " enable Undotree
 map <Leader>u :UndotreeToggle <CR>
+" enable Ctrlp
+map <Leader>f :CtrlPMixed <CR>
