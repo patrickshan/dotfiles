@@ -89,6 +89,9 @@ NeoBundle 'avakhov/vim-yaml'
 " vim undotree
 NeoBundle 'mbbill/undotree'
 
+" autoclose
+NeoBundle 'vim-scripts/AutoClose'
+
 call neobundle#end()
 
 if has('vim_starting') && s:InitNeoBundle == 1
