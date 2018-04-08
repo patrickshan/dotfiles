@@ -40,3 +40,5 @@ nmap <Leader><Leader> V
 
 " enable Nerdtree
 map <Leader>n :NERDTreeToggle <CR>
+" enable Undotree
+map <Leader>u :UndotreeToggle <CR>

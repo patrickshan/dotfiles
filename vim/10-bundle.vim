@@ -86,6 +86,9 @@ NeoBundle 'hashivim/vim-terraform'
 " vim yaml plugin
 NeoBundle 'avakhov/vim-yaml'
 
+" vim undotree
+NeoBundle 'mbbill/undotree'
+
 call neobundle#end()
 
 if has('vim_starting') && s:InitNeoBundle == 1
