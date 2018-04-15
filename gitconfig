@@ -1,10 +1,16 @@
+[include]
+    path = ~/.git.subconfig
+[core]
+	editor = /usr/bin/vim
+	excludesfile = ~/.gitignore_global
 [user]
-name = Patrick Shan
-email = patrickshan.syd@gmail.com
+	name = Patrick Shan
 [alias]
-	co = checkout
-	br = branch
-	ci = commit
-	st = status
-	last = log -1 HEAD
-	git = !exec git
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    dc = diff --cached
+    lg = log -p
+    who = shortlog -s --
