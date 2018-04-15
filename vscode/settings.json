@@ -11,4 +11,6 @@
     "go.formatTool": "goimports",
     "go.useLanguageServer": true,
     "workbench.editor.enablePreview": false,
+     // stop sending telemetry reporting to MS
+    "telemetry.enableTelemetry": false
 }
