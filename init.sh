@@ -2,8 +2,9 @@
 
 
 run_time=`date +%Y%m%d%H%M`
+os_name=`uname -s`
 
-if [[ `uname` == 'Darwin' ]]; then
+if [[ '${os_name}' == 'Darwin' ]]; then
     if ! which greadlink 2>&1 >/dev/null
     then
         echo "Please install coreutils first:\n\tbrew install coreutils"
@@ -20,12 +21,14 @@ script_path=`dirname ${script_name}`
 function updatelink {
     confname=$1
     sourcename=${2:-$confname}
+    # adding a dot in the beginning
+    destname=.${3:-$confname}
 
-    if [[ -e ${HOME}/.$confname ]]
+    if [[ -e ${HOME}/$destname ]]
     then
-        mv -v ${HOME}/.$confname ${HOME}/.$confname.bak.${run_time}
+        mv -v ${HOME}/$destname ${HOME}/$destname.bak.${run_time}
     fi
-    ln -sf ${script_path}/$sourcename ${HOME}/.$confname
+    ln -sf ${script_path}/$sourcename ${HOME}/$destname
 }
 
 updatelink 'dircolors' 'dircolors-solarized/dircolors.256dark'
@@ -42,8 +45,11 @@ updatelink 'gitconfig'
 
 updatelink 'mplayer'
 
-if [[ `uname` == 'Darwin' ]]; then
+if [[ ${os_name} == 'Darwin' ]]; then
     updatelink 'Brewfile'
+    updatelink 'git.subconfig' 'git.subconfig.mac'
+elif [[ ${os_name} == 'Linux' ]]; then
+    updatelink 'git.subconfig' 'git.subconfig.linux'
 fi
 
 git submodule update --init --recursive
