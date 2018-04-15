@@ -1,3 +1,5 @@
+" use python3 by default
+let g:pymode_python = 'python3'
 " python-mode configuration
 " max line length
 let g:pymode_options_max_line_length = 100
