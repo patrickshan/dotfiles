@@ -1,6 +1,12 @@
 " set no compatible with vi
 set nocompatible
 
+" ignore python3 warning
+" https://github.com/vim/vim/issues/3117
+if has('python3')
+  silent! python3 1
+endif
+
 " configure viminfo (Ref :h options and /viminfo)
 " this will make viminfo to remember last 20 files marks with
 " 600 line for each register and 20 history commands
