@@ -133,12 +133,6 @@ if [[ -f ${venvwrap} ]]; then
    source $venvwrap
 fi
 
-# add a alias for docker when using Linux
-if [[ `uname` = 'Linux' ]]
-then
-    alias docker='sudo /usr/bin/docker'
-fi
-
 # include kubectl auto-completion
 if type "kubectl" > /dev/null
 then
@@ -147,6 +141,6 @@ fi
 
 source ${HOME}/tools/dotfiles/oh-my-zsh/plugins/z/z.sh
 
-if [[ -f ${HOME}/venv/main/share/cloudtoken/shell_additions/bashrc_additions ]]; then
-    source ${HOME}/venv/main/share/cloudtoken/shell_additions/bashrc_additions
+if [[ -f ${HOME}/venv/main/lib/python3.7/site-packages/cloudtoken/shell_additions/bashrc_additions ]]; then
+    source ${HOME}/venv/main/lib/python3.7/site-packages/cloudtoken/shell_additions/bashrc_additions
 fi

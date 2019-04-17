@@ -37,7 +37,7 @@ updatelink 'zshrc'
 
 updatelink 'vim'
 
-updatelink 'i3'
+updatelink 'i3' 'i3' 'config/i3'
 
 updatelink 'screenrc'
 
