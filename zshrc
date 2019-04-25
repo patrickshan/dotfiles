@@ -4,7 +4,10 @@ PATH=$PATH:/usr/local/bin:/usr/local/go/bin
 export GOPATH=${HOME}/gocode
 
 # set CDPATH variable
-export CDPATH=".:${HOME}:${HOME}/repos:$(go env GOPATH)/src"
+# leave the first one empty instead of using '.'
+# as using '.' will cause `cd` to print subdirectory name when changing to a subdirectory
+# inside current directory (`.`)
+export CDPATH=":${HOME}:${HOME}/repos:$(go env GOPATH)/src"
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/tools/dotfiles/oh-my-zsh
@@ -79,7 +82,7 @@ source $ZSH/oh-my-zsh.sh
 # enable extended glob for zsh, so you can use something like mv ^bak bak
 setopt extended_glob
 
-PATH=$(go env GOPATH)/bin:/home/patrick/javascript/node/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/go/bin:${HOME}/venv/main/bin:${HOME}/tools/scripts:/usr/local/bin:${PATH}:/usr/sbin:/sbin
+PATH=${HOME}/venv/main/bin:$(go env GOPATH)/bin:/home/patrick/javascript/node/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/go/bin:${HOME}/tools/scripts:/usr/local/bin:${PATH}:/usr/sbin:/sbin
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -147,6 +150,8 @@ fi
 
 source ${HOME}/tools/dotfiles/oh-my-zsh/plugins/z/z.sh
 
-if [[ -f ${HOME}/venv/main/share/cloudtoken/shell_additions/bashrc_additions ]]; then
-    source ${HOME}/venv/main/share/cloudtoken/shell_additions/bashrc_additions
+export VAULT_ADDR="https://vault.growth.internal.atlassian.com:8200"
+
+if [[ -f ${HOME}/.config/cloudtoken/bashrc_additions ]]; then
+    source ${HOME}/.config/cloudtoken/bashrc_additions
 fi
