@@ -5,6 +5,7 @@
 	excludesfile = ~/.gitignore_global
 [user]
 	name = Patrick Shan
+	email = pshan@atlassian.com
 [alias]
     st = status
     ci = commit

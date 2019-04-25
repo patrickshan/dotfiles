@@ -36,7 +36,7 @@ NeoBundle 'itchyny/lightline.vim'
 " syntastic syntax checking plugin
 " NeoBundle 'scrooloose/syntastic'
 " python-mode plugin
-NeoBundle 'klen/python-mode'
+NeoBundle 'diraol/python-mode', { 'rev' : 'develop' }
 " YouCompleteMe plugin which can automatically do code-completion
 NeoBundle 'Valloric/YouCompleteMe', {
             \   'build': {

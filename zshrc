@@ -136,12 +136,6 @@ if [[ -f ${venvwrap} ]]; then
    source $venvwrap
 fi
 
-# add a alias for docker when using Linux
-if [[ `uname` = 'Linux' ]]
-then
-    alias docker='sudo /usr/bin/docker'
-fi
-
 # include kubectl auto-completion
 if type "kubectl" > /dev/null
 then
