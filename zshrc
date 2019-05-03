@@ -20,7 +20,7 @@ ZSH_THEME="amuse"
 #ZSH_THEME="agnoster"
 
 # enable dircolors
-# eval `dircolors ${HOME}/.dircolors`
+eval `dircolors ${HOME}/.dircolors`
 
 # set ls color for Mac
 export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
