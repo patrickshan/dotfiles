@@ -19,6 +19,8 @@ export ZSH=$HOME/tools/dotfiles/oh-my-zsh
 ZSH_THEME="amuse"
 #ZSH_THEME="agnoster"
 
+PATH=${HOME}/venv/main/bin:$(go env GOPATH)/bin:/home/patrick/javascript/node/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/go/bin:${HOME}/tools/scripts:/usr/local/bin:${PATH}:/usr/sbin:/sbin
+
 # enable dircolors
 eval `dircolors ${HOME}/.dircolors`
 
@@ -28,8 +30,9 @@ export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 # mercurial completion
 source /usr/local/share/zsh/site-functions
 
-# FIX ME: need a separated alias file
 alias vi='vim'
+
+alias k='kubectl'
 
 # make sure grep display color even after piping to another grep which is used by -v
 alias grep='grep --color=always'
@@ -82,7 +85,6 @@ source $ZSH/oh-my-zsh.sh
 # enable extended glob for zsh, so you can use something like mv ^bak bak
 setopt extended_glob
 
-PATH=${HOME}/venv/main/bin:$(go env GOPATH)/bin:/home/patrick/javascript/node/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/go/bin:${HOME}/tools/scripts:/usr/local/bin:${PATH}:/usr/sbin:/sbin
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
