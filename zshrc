@@ -34,6 +34,8 @@ alias vi='vim'
 
 alias k='kubectl'
 
+alias kdes='kubectl describe'
+
 # make sure grep display color even after piping to another grep which is used by -v
 alias grep='grep --color=always'
 
