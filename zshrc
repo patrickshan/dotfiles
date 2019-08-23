@@ -4,7 +4,10 @@ PATH=$PATH:/usr/local/bin:/usr/local/go/bin
 export GOPATH=${HOME}/gocode
 
 # set CDPATH variable
-export CDPATH=".:${HOME}:${HOME}/repos:$(go env GOPATH)/src"
+# leave the first one empty instead of using '.'
+# as using '.' will cause `cd` to print subdirectory name when changing to a subdirectory
+# inside current directory (`.`)
+export CDPATH=":${HOME}:${HOME}/repos:$(go env GOPATH)/src"
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/tools/dotfiles/oh-my-zsh
@@ -16,8 +19,10 @@ export ZSH=$HOME/tools/dotfiles/oh-my-zsh
 ZSH_THEME="amuse"
 #ZSH_THEME="agnoster"
 
+PATH=${HOME}/venv/main/bin:$(go env GOPATH)/bin:/home/patrick/javascript/node/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/go/bin:${HOME}/tools/scripts:/usr/local/bin:${PATH}:/usr/sbin:/sbin
+
 # enable dircolors
-# eval `dircolors ${HOME}/.dircolors`
+eval `dircolors ${HOME}/.dircolors`
 
 # set ls color for Mac
 export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
@@ -25,8 +30,11 @@ export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 # mercurial completion
 source /usr/local/share/zsh/site-functions
 
-# FIX ME: need a separated alias file
 alias vi='vim'
+
+alias k='kubectl'
+
+alias kdes='kubectl describe'
 
 # make sure grep display color even after piping to another grep which is used by -v
 alias grep='grep --color=always'
@@ -141,6 +149,8 @@ fi
 
 source ${HOME}/tools/dotfiles/oh-my-zsh/plugins/z/z.sh
 
-if [[ -f ${HOME}/venv/main/lib/python3.7/site-packages/cloudtoken/shell_additions/bashrc_additions ]]; then
-    source ${HOME}/venv/main/lib/python3.7/site-packages/cloudtoken/shell_additions/bashrc_additions
+export VAULT_ADDR="https://vault.growth.internal.atlassian.com:8200"
+
+if [[ -f ${HOME}/.config/cloudtoken/bashrc_additions ]]; then
+    source ${HOME}/.config/cloudtoken/bashrc_additions
 fi

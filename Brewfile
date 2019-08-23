@@ -70,7 +70,7 @@ brew "sl", link: false
 brew "stern"
 brew "tcptraceroute"
 brew "terraform", link: false
-brew "the_silver_searcher"
+brew "ripgrep"
 brew "tig"
 brew "tmux"
 brew "tree"
