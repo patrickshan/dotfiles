@@ -31,6 +31,8 @@ NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'ntpeters/vim-better-whitespace'
 " light and configurable statusline
 NeoBundle 'itchyny/lightline.vim'
+" syntax for rust
+NeoBundle 'rust-lang/rust.vim'
 
 " Syntax plugins
 " syntastic syntax checking plugin
