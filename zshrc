@@ -1,4 +1,3 @@
-
 # needs go binary to set other paths
 PATH=$PATH:/usr/local/bin:/usr/local/go/bin
 export GOPATH=${HOME}/gocode
@@ -12,6 +11,8 @@ export CDPATH=":${HOME}:${HOME}/repos:$(go env GOPATH)/src"
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/tools/dotfiles/oh-my-zsh
 
+eval "$(starship init zsh)"
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -19,7 +20,7 @@ export ZSH=$HOME/tools/dotfiles/oh-my-zsh
 ZSH_THEME="amuse"
 #ZSH_THEME="agnoster"
 
-PATH=${HOME}/venv/main/bin:$(go env GOPATH)/bin:/home/patrick/javascript/node/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/go/bin:${HOME}/tools/scripts:/usr/local/bin:${PATH}:/usr/sbin:/sbin
+PATH=${HOME}/venv/main/bin:${HOME}/.local/bin:${HOME}/kube/bin:$(go env GOPATH)/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/go/bin:${HOME}/tools/scripts:/usr/local/bin:/usr/local/sbin:${PATH}:/usr/sbin:/sbin:${HOME}/.cargo/bin:${HOME}/.krew/bin
 
 # enable dircolors
 eval `dircolors ${HOME}/.dircolors`
@@ -36,11 +37,14 @@ alias k='kubectl'
 
 alias kdes='kubectl describe'
 
+alias kdesn='kubectl describe node'
+
+alias kdesp='kubectl describe pod'
 # make sure grep display color even after piping to another grep which is used by -v
 alias grep='grep --color=always'
 
 # Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+#CASE_SENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 DISABLE_AUTO_UPDATE="true"
@@ -77,7 +81,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+#plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -89,7 +93,7 @@ setopt extended_glob
 
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -126,7 +130,7 @@ then
         ln -sf $SSH_AUTH_SOCK ${HOME}/.ssh/ssh_auth_sock
 fi
 
-source ${HOME}/tools/dotfiles/credentials.sh
+#source ${HOME}/tools/dotfiles/credentials.sh
 
 # add pyenv configuration
 if which pyenv > /dev/null; then
@@ -146,10 +150,13 @@ then
     source <(kubectl completion zsh)
 fi
 
-source ${HOME}/tools/dotfiles/oh-my-zsh/plugins/z/z.sh
-
-export VAULT_ADDR="https://vault.growth.internal.atlassian.com:8200"
-
 if [[ -f ${HOME}/.config/cloudtoken/bashrc_additions ]]; then
     source ${HOME}/.config/cloudtoken/bashrc_additions
 fi
+
+[ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
