@@ -91,6 +91,7 @@ source $ZSH/oh-my-zsh.sh
 # enable extended glob for zsh, so you can use something like mv ^bak bak
 setopt extended_glob
 
+PATH=$(go env GOPATH)/bin:/home/patrick/javascript/node/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/go/bin:${HOME}/venv/main/bin:${HOME}/tools/scripts:/usr/local/bin:${PATH}:/usr/sbin:/sbin:$HOME/.cargo/bin
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
