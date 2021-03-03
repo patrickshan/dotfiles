@@ -42,8 +42,8 @@ NeoBundle 'diraol/python-mode', { 'rev' : 'develop' }
 " YouCompleteMe plugin which can automatically do code-completion
 NeoBundle 'Valloric/YouCompleteMe', {
             \   'build': {
-            \       'unix': './install.py',
-            \       'mac': './install.py'
+            \       'unix': './install.py --go-completer',
+            \       'mac': './install.py --go-completer'
             \   }
             \}
 " puppet syntax vim plugin
